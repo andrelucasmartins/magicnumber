@@ -1,5 +1,6 @@
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
+import { GoogleAnalytics } from "@/utils/googleAnalytics";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -18,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} `}>
+        <GoogleAnalytics gaMeasurementId="G-12600NPL31" />
         <Header />
         {children}
         <Footer />
