@@ -65,13 +65,13 @@ export const FormQuotaCalculator = () => {
         <div className="flex flex-col gap-y-1">
           <label htmlFor="quota">Preço da ação</label>
           <input
+            {...register("quota")}
             placeholder="R$ 10,00"
             className="w-full h-14 bg-slate-50 rounded-lg placeholder:text-gray-400 text-slate-500 p-4 
             focus:outline-none focus:ring-2 ring-teal-600"
             id="quota"
             inputMode="numeric"
             autoComplete="cc-number"
-            {...register("quota")}
             onChange={(e) => {
               const { value } = e.target;
               e.target.value = FormatCurrency(value);
